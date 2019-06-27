@@ -1,0 +1,105 @@
+#landing {
+    height: 500px;
+    background-image: url('../images/ba.jpg');
+    background-size: cover;
+    margin-top: 50px
+}
+
+.landing-texts{
+    
+    padding: 10%;
+    margin-top: 10%;
+}
+
+.landing-form {
+    border: 1px solid #cccccc;
+    padding: 5%;
+    margin-top: 10%;
+    border-radius: 5px;
+    height: 60%;
+}
+
+.landing-form label {
+    font-size: 18px;
+    color: #ffffff
+}
+.hp-r1 {
+    margin: 10% auto;
+}
+
+.pay-mt {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: #212529
+}
+#login-landing {
+    min-height: 500px;
+    background-image: url('../images/shopper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#login-form, #reg-form {
+    margin-top: 4%;
+    margin-bottom: 5%
+}
+#main-footer {
+    background: #343a40;
+    color: #ffffff;
+    min-height: 100px;
+}
+#dashboard {
+    margin-top: 4%;
+    padding: 0;
+}
+#side-nav {
+    background: #222529;
+    margin: 0px;
+    position: fixed;
+    height: 100%;
+    padding: 0;
+    margin: 0
+}
+#side-nav .navbar, #side-nav ul {
+    padding: 0;
+    margin: 0;
+}
+#side-nav ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+#side-nav ul li a {
+    width: 100%;
+    padding: 5%;
+    color: #ffffff;
+}
+#side-nav ul li a:hover {
+    background: #3c5166;
+}
+.card-tile {
+    
+    width: 100%;
+    height: 100px;
+    box-shadow:2px 4px 20px 5px  #eeeeee;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 5px
+}
+
+.card-tile .title {
+    color: #3c5166
+}
+.card-tile .count {
+    font-size: 48px
+}
+@media all and (max-width:755px)
+{
+ #side-nav {
+    margin-top: 26px;
+    height: auto;
+    position: static
+ }
+}
