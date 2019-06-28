@@ -25,7 +25,7 @@ Route::group(['namespace'=>"Users",'prefix'=>'users'],function(){
     Route::get('{/transactions','HomeController@allTransactions')->name('user.transactions');
 });
 
-Route::group(['namespace'=>"Admin",'prefix'=>'admin'],function(){
+Route::group(['namespace'=>"Admin",'prefix'=>'admin','middleware'=>'is_admin'],function(){
     Route::get('', 'AdminController@index')->name('admin.index');
     Route::get('product', 'AdminController@products')->name('admin.products');
     Route::get('users', 'AdminController@users')->name('admin.users');

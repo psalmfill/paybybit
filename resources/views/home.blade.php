@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-4">
                         <h2 class="count">
-                            5
+                        {{$data['completed_order_count']}}
                         </h2>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-md-4">
                         <h2 class="count">
-                            5
+                        {{$data['pending_order_count']}}
                         </h2>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-md-4">
                         <h2 class="count">
-                            5
+                        {{$data['transactions']}}
                         </h2>
                     </div>
                 </div>

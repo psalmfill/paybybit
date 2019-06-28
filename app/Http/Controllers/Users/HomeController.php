@@ -27,6 +27,13 @@ class HomeController extends Controller
     {
         $data = [];
         $data['products'] = auth()->user()->products->count();
+        $completedOrder = auth()->user()->products->where('status','=','completed')->count();
+        $pendingOrder = auth()->user()->products->where('status','!=','completed')->count();
+        $transactions = auth()->user()->transactions->count();
+
+        $data['completed_order_count'] = $completedOrder;
+        $data['pending_order_count'] = $pendingOrder;
+        $data['transactions'] = $transactions;
         return view('home',compact('data'));
     }
 

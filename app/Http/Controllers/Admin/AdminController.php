@@ -12,7 +12,7 @@ class AdminController extends Controller
     public function __construct()
     {
        
-        $this->middleware(['auth','is_admin']);
+        $this->middleware('auth');
     }
 
     public function index(){
@@ -20,7 +20,7 @@ class AdminController extends Controller
         $users = User::all()->count();
         $products = Product::all()->count();
         $completedOrder = Product::where('status','=','completed')->get()->count();
-        $pendingOrder = Product::where('status','=','pending')->get()->count();
+        $pendingOrder = Product::where('status','!=','completed')->get()->count();
 
         $data['users_count'] = $users;
         $data['products_count'] = $products;
