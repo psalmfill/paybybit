@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
@@ -43,7 +44,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('welcome') }}">{{ __('Home') }}</a>
+                            <a class="nav-link" href="{{ route('welcome') }}"><i class="fa fa-home"></i> {{ __('Home') }}</a>
                         </li>
                         @guest
                         @if (Route::has('register'))
@@ -58,7 +59,7 @@
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                            <i class="fa fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -92,7 +93,7 @@
                                     @if(auth()->user()->isAdmin())
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('admin.index') }}">{{ __('Dashboard') }}</a>
+                                        <a class="nav-link" href="{{ route('admin.index') }}"><i class="fa fa-dashboard"></i> {{ __('Dashboard') }}</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -104,17 +105,17 @@
                                     </li>
                                     @else
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
+                                        <a class="nav-link" href="{{ route('home') }}"><i class="fa fa-dashboard"></i> {{ __('Dashboard') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('products.index') }}">{{ __('My Purchases') }}</a>
+                                        <a class="nav-link" href="{{ route('products.index') }}"><i class="fa fa-shopping-cart"></i> {{ __('My Purchases') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('user.transactions') }}">{{ __('My Transaction') }}</a>
+                                        <a class="nav-link" href="{{ route('user.transactions') }}"><i class="fa fa-credit-card"></i> {{ __('My Transaction') }}</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('logout') }} " onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                                                     document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> {{ __('Logout') }}</a>
                                     </li>
                                     @endif
                                 </ul>

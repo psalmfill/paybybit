@@ -22,7 +22,7 @@ Route::group(['namespace'=>"Users",'prefix'=>'users'],function(){
     Route::resource('products', 'ProductsController');
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('products/{id}/transactions','HomeController@transactions')->name('product.transactions');
-    Route::get('{/transactions','HomeController@allTransactions')->name('user.transactions');
+    Route::get('/transactions','HomeController@allTransactions')->name('user.transactions');
 });
 
 Route::group(['namespace'=>"Admin",'prefix'=>'admin','middleware'=>'is_admin'],function(){
