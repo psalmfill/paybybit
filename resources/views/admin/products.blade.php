@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="table-responsive">
-                
+
                 <table class="table table-striped">
                     <thead class="bg-dark text-white">
                         <th>Product Name</th>
@@ -32,7 +32,7 @@
                             <td>{{$product->price}}</td>
                             <td>{{$product->paid}}</td>
                             <td>{{$product->balance}}</td>
-                            <td class="@if($product->status =='completed') bg-success @endif">{{$product->status}}</td>
+                            <td> <button class="btn  @if($product->status =='completed') btn-success @endif">{{$product->status}}</button></td>
                             <td>{{$product->user->name}}</td>
                             <td>{{$product->user->email}}</td>
                             <td><a href="#" class="btn btn-info text-white">Transactions</a></td>

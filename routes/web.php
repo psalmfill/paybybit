@@ -33,5 +33,5 @@ Route::group(['namespace'=>"Admin",'prefix'=>'admin'],function(){
     Route::get('products/{id}','AdminController@payForProduct')->name('admin.pay');
     Route::post('products/{id}/deposit','AdminController@deposit')->name('admin.deposit');
     Route::get('products/{id}/transactions','AdminController@transactions')->name('admin.product.transactions');
-    Route::get('user/transactions','AdminController@userTransactions')->name('admin.user.transactions');
+    Route::get('user/transactions/{id}','AdminController@userTransactions')->name('admin.user.transactions');
 });
