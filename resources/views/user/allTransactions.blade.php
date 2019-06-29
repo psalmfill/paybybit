@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h4>Products ordered by {{$user->name}}</h4>
+            <h4 class="text-primary-s">All Transactions</h4>
             <form action="" method="post">
                 <input type="search" class="form-control form-block" placeholder="search">
             </form>
@@ -15,8 +15,8 @@
         <div class="col-md-12">
             <div class="table-responsive">
                 
-                <table class="table table-striped">
-                    <thead class="bg-dark text-white">
+                <table class="table ">
+                    <thead class="bg-primary-s text-white">
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Deposit</th>

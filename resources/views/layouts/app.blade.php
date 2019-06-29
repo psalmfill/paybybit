@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{asset('/images/logo.jpeg')}}" alt="best-tech" width="80">
+                    <img src="{{asset('/images/logo.jpeg')}}" alt="best-tech" width="80">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -45,6 +45,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('welcome') }}">{{ __('Home') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('policies')}}">Policies</a>
+                        </li>
                         @guest
                         @if (Route::has('register'))
                         <li class="nav-item">
@@ -54,7 +57,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
-                        
+
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -80,6 +83,16 @@
 
         <main class="py-4">
             @yield('content')
+
+            <footer id="main-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-center">2019&copy;</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </main>
     </div>
 </body>

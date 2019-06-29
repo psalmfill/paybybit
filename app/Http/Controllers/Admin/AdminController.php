@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Product;
+use App\Transaction;
 
 class AdminController extends Controller
 {
@@ -38,6 +39,12 @@ class AdminController extends Controller
         return view('admin.products',compact('products'));
     }
 
+    public function allTransactions(Request $request){
+        $transactions = Transaction::all();
+
+        return view('admin.user.allTransactions',compact('transactions'));
+    } 
+
     public function transactions(Request $request,$id){
         $product = Product::find($id);
 
@@ -46,7 +53,7 @@ class AdminController extends Controller
     public function userTransactions(Request $request,$id){
         $user = user::find($id);
 
-        return view('admin.user.allTransactions',compact('user'));
+        return view('admin.user.userTransactions',compact('user'));
     }
     public function users(){
         $users = User::all();

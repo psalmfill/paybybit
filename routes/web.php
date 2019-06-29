@@ -17,7 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
+Route::get('policies',function(){
+    return view('policies');
+})->name('policies');
 Route::group(['namespace'=>"Users",'prefix'=>'users'],function(){
     Route::resource('products', 'ProductsController');
     Route::get('/home', 'HomeController@index')->name('home');
@@ -33,5 +35,6 @@ Route::group(['namespace'=>"Admin",'prefix'=>'admin','middleware'=>'is_admin'],f
     Route::get('products/{id}','AdminController@payForProduct')->name('admin.pay');
     Route::post('products/{id}/deposit','AdminController@deposit')->name('admin.deposit');
     Route::get('products/{id}/transactions','AdminController@transactions')->name('admin.product.transactions');
+    Route::get('transactions','AdminController@allTransactions')->name('admin.transactions');
     Route::get('user/transactions/{id}','AdminController@userTransactions')->name('admin.user.transactions');
 });

@@ -45,6 +45,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('welcome') }}"><i class="fa fa-home"></i> {{ __('Home') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('policies')}}">Policies</a>
+                        </li>
                         @guest
                         @if (Route::has('register'))
                         <li class="nav-item">
@@ -58,7 +61,7 @@
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <i class="fa fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>
+                                <i class="fa fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -101,6 +104,9 @@
 
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('admin.products') }}">{{ __('Purchases') }}</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('admin.transactions') }}">{{ __('Transactions') }}</a>
                                     </li>
                                     @else
                                     <li class="nav-item">
@@ -198,6 +204,15 @@
                 </div>
             </div>
         </div>
+        <footer id="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">2019&copy;</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 

@@ -2,20 +2,22 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <form action="" method="post">
-                <input type="search" class="form-control form-block" placeholder="search">
-            </form>
-            <br>
-        </div>
-    </div>
+
     <div class="row">
         <div class="col-md-12">
+            <h4 class="text-primary-s"> Users</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="" method="post">
+                        <input type="search" class="form-control form-block" placeholder="search">
+                    </form>
+                    <br>
+                </div>
+            </div>
             <div class="table-responsive">
 
-                <table class="table table-striped">
-                    <thead class="bg-dark text-white">
+                <table class="table ">
+                    <thead class="bg-primary-s text-white">
                         <th>Name</th>
                         <th>Email</th>
                         <th>Address</th>

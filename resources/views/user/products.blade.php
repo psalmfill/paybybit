@@ -4,10 +4,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+
+        <h4 class="text-primary-s">My Purchases</h4>
+        <hr>
             <div class="table-responsive">
 
-                <table class="table table-striped">
-                    <thead class="bg-dark text-white">
+                <table class="table">
+                    <thead class="bg-primary-s text-white">
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Paid</th>

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h4>All Transactions</h4>
+            <h4>Products ordered by {{$user->name}}</h4>
             <form action="" method="post">
                 <input type="search" class="form-control form-block" placeholder="search">
             </form>
@@ -15,27 +15,21 @@
         <div class="col-md-12">
             <div class="table-responsive">
                 
-                <table class="table ">
-                    <thead class="bg-primary-s text-white">
+                <table class="table table-striped">
+                    <thead class="bg-dark text-white">
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Deposit</th>
                         <th>Balance</th>
-                        <td>Username</td>
-                        <td>Email</td>
-                        <td>Phone</td>
                         <th>Status</th>
                     </thead>
                     <tbody>
-                        @forelse($transactions as $transaction)
+                        @forelse($user->transactions as $transaction)
                         <tr>
                             <td>{{$transaction->product->name}}</td>
                             <td>{{$transaction->product->price}}</td>
                             <td>{{$transaction->amount}}</td>
                             <td>{{$transaction->product->balance}}</td>
-                            <td>{{$transaction->product->user->username}}</td>
-                            <td>{{$transaction->product->user->email}}</td>
-                            <td>{{$transaction->product->user->phone}}</td>
                             <td > <button class=" btn @if($transaction->product->status =='completed') btn-success @endif">{{$transaction->product->status}}</button></td>
         
                         </tr>

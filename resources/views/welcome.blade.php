@@ -84,6 +84,9 @@
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{route('policies')}}">Policies</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('register')}}">Create Account</a>
                         </li>
                         <li class="nav-item">
@@ -146,7 +149,7 @@
             <div class="col-md-12">
                 <div class="text-center ">
                     <br><br>
-                    <h2 class="text-primary-s">Home of Phones Ands Gadgets</h2>
+                    <h2 class="text-primary-s">Home of Phones and Gadgets</h2>
                     <br>
                     <img src="{{asset('/images/phones.png')}}" alt="phones" class="img-fluid">
                 </div>
@@ -161,7 +164,7 @@
                 </div>
                 <div class="col-md-6 ">
                     <div class="pay-mt text-white">
-                        <h2 >We accept all forms of payment</h2>
+                        <h2>We accept all forms of payment</h2>
                         <h2>You are never limited</h2>
                     </div>
                 </div>
@@ -181,7 +184,7 @@
             </div>
         </div>
     </div>
-    <h6 id="main-footer">
+    <footer id="main-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -189,7 +192,7 @@
                 </div>
             </div>
         </div>
-        </footer>
+    </footer>
 </body>
 
 </html>
