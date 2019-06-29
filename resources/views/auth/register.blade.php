@@ -4,10 +4,10 @@
 <div class="container-fluid" id="login-landing">
     <div class="row " >
         <div class="col-md-4 offset-md-8" id="reg-form">
-            <div class="card bg-dark text-white" >
-                <div class="card-header">{{ __('Create Account') }}</div>
+            <div class="card bg-white " >
+                <div class="card-header text-white bg-primary-s text-uppercase">{{ __('Create Account') }}</div>
 
-                <div class="card-body">
+                <div class="card-body text-primary-s">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -101,7 +101,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-12 offset-md-12">
-                                <button type="submit" class="btn btn-success btn-block">
+                                <button type="submit" class="btn btn-primary-s btn-block">
                                     {{ __('Register') }}
                                 </button>
                             </div>

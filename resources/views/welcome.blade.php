@@ -8,6 +8,8 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -70,8 +72,8 @@
 <body>
     <div class="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <a class="navbar-brand" href="#">PaybyBit</a>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+                <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('/images/logo.jpeg')}}" alt="best-tech" width="80"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -96,10 +98,10 @@
         <div class="row" id="landing">
             <div class="col-md-6">
                 <div class="text-white landing-texts ">
-                    <h1>Home of smooth purchases</h1>
-                    <h3>Easy Payment</h3>
-                    <h3>Pay by installment</h3>
-                    <a href="{{route('register')}}" class="btn btn-success">Create an Account now</a>
+                    <h1>Buy any phone and gadgets!</h1>
+                    <h4>Easy Payment</h4>
+                    <h4>Pay in installment</h4>
+                    <a href="{{route('register')}}" class="btn btn-primary-s">Create an Account now <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-md-4 offset-md-1">
@@ -109,7 +111,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="username">Username</label>
-                                <input type="text" class="form-control input-block" name="username">
+                                <input type="text" class="form-control input-block" name="username" placeholder="Username">
                                 @error('username')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -120,7 +122,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="username">Password</label>
-                                <input type="password" name="password" class="form-control input-block">
+                                <input type="password" name="password" class="form-control input-block" placeholder="Password">
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -131,7 +133,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <br>
-                                <button class="btn btn-success btn-block">Login</button>
+                                <button class="btn btn-primary-s btn-block">Login</button>
                             </div>
                         </div>
                     </form>
@@ -139,15 +141,29 @@
             </div>
         </div>
     </div>
-    <div class="container text-center">
-        <div class="row hp-r1">
-            <div class="col-md-6">
-                <img src="{{asset('images/payment.jpg')}}" alt="" width="500">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center ">
+                    <br><br>
+                    <h2 class="text-primary-s">Home of Phones Ands Gadgets</h2>
+                    <br>
+                    <img src="{{asset('/images/phones.png')}}" alt="phones" class="img-fluid">
+                </div>
             </div>
-            <div class="col-md-6 ">
-                <div class="pay-mt ">
-                    <h2 class="text-success">We accept all forms of payment</h2>
-                    <h2>You are never limited</h2>
+        </div>
+    </div>
+    <div class="container-fluid text-center bg-primary-s">
+        <div class="container">
+            <div class="row hp-r1">
+                <div class="col-md-6">
+                    <img src="{{asset('images/pay.png')}}" alt="" width="500">
+                </div>
+                <div class="col-md-6 ">
+                    <div class="pay-mt text-white">
+                        <h2 >We accept all forms of payment</h2>
+                        <h2>You are never limited</h2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,7 +173,7 @@
 
             <div class="col-md-6 ">
                 <div class="pay-mt ">
-                    <h2 class="text-success">Accessibility and reliability</h2>
+                    <h2 class="text-primary-s">Accessibility and reliability</h2>
                 </div>
             </div>
             <div class="col-md-6">
@@ -165,15 +181,15 @@
             </div>
         </div>
     </div>
-    <footer id="main-footer">
+    <h6 id="main-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h6 class="text-center">2019&copy;</h6>
+                    <p class="text-center">2019&copy;</p>
                 </div>
             </div>
         </div>
-    </footer>
+        </footer>
 </body>
 
 </html>

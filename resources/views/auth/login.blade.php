@@ -4,10 +4,10 @@
 <div class="container-fluid">
     <div class="row " id="login-landing">
         <div class="col-md-4 offset-md-8" id="login-form">
-            <div class="card bg-dark text-white">
-                <div class="card-header text-uppercase">{{ __('Login') }}</div>
+            <div class="card bg-white ">
+                <div class="card-header text-uppercase bg-primary-s text-white">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body text-primary-s">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -53,12 +53,12 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-12 offset-md-12">
-                                <button type="submit" class="btn btn-success btn-block">
+                                <button type="submit" class="btn btn-primary-s btn-block">
                                     {{ __('Login') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link text-warning" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link text-info" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif

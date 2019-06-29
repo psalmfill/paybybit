@@ -25,10 +25,9 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'PayByBit') }}
+                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('/images/logo.jpeg')}}" alt="best-tech" width="80">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -82,8 +81,8 @@
         <main id="dashboard">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-2" id="side-nav">
-                        <nav class="navbar navbar-expand-md navbar-dark ">
+                    <div class="col-md-2 bg-primary-s" id="side-nav">
+                        <nav class="navbar navbar-expand-md ">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbaraside" aria-controls="navbaraside" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -127,7 +126,7 @@
                     @if(!auth()->user()->isAdmin())
                     <div class="row">
                         <div class="col-md-2 offset-md-10">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#purchaseModal">
+                            <button type="button" class="btn btn-primary-s" data-toggle="modal" data-target="#purchaseModal">
                                 New Purchase
                             </button>
                         </div>

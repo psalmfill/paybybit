@@ -1,3 +1,14 @@
+.text-primary-s {
+    color:#d00043;
+}
+.bg-primary-s {
+    background-color:#d00043;
+}
+.btn-primary-s {
+    background-color:#d00043;
+    color: #ffffff;
+}
+
 #landing {
     height: 500px;
     background-image: url('../images/ba.jpg');
@@ -12,9 +23,9 @@
 }
 
 .landing-form {
-    border: 1px solid #cccccc;
+    border: 1px solid #eeeeee;
     padding: 5%;
-    margin-top: 10%;
+    margin-top: 20%;
     border-radius: 5px;
     height: 60%;
 }
@@ -40,20 +51,20 @@
     background-size: cover;
 }
 #login-form, #reg-form {
-    margin-top: 4%;
+    margin-top: 8%;
     margin-bottom: 5%
 }
 #main-footer {
-    background: #343a40;
+    background: #d00043;
     color: #ffffff;
-    min-height: 100px;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 #dashboard {
-    margin-top: 4%;
+    margin-top: 6%;
     padding: 0;
 }
 #side-nav {
-    background: #222529;
     margin: 0px;
     position: fixed;
     height: 100%;
