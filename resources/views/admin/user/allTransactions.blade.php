@@ -29,7 +29,7 @@
                     <tbody>
                         @forelse($transactions as $transaction)
                         <tr>
-                            <td>{{$transaction->product->name}}</td>
+                            <td><a class="text-primary-s" href="{{route('admin.pay',$transaction->product->id)}}">{{$transaction->product->name}}</a> </td>
                             <td>{{$transaction->product->price}}</td>
                             <td>{{$transaction->amount}}</td>
                             <td>{{$transaction->product->balance}}</td>

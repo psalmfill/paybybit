@@ -39,8 +39,8 @@ class AdminController extends Controller
         return view('admin.products',compact('products'));
     }
 
-    public function allTransactions(Request $request){
-        $transactions = Transaction::all();
+    public function allTransactions(Request $request,$id){
+        $transactions = Transaction::all($id);
 
         return view('admin.user.allTransactions',compact('transactions'));
     } 
@@ -81,6 +81,10 @@ class AdminController extends Controller
     public function deposit(Request $request,$id)
     {
         $product = Product::find($id);
+
+        if($product->banlance < $request->amount){
+            return redirect()->back()->with('error','Amount is more than the balance');
+        }
         
         $product->paid = $this->calulatePaid($product,$request->amount);
         $product->balance = $this->calulateBalance($product);

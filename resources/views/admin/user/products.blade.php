@@ -15,8 +15,8 @@
         <div class="col-md-12">
             <div class="table-responsive">
                 
-                <table class="table table-striped">
-                    <thead class="bg-dark text-white">
+                <table class="table">
+                    <thead class="bg-primary-s text-white">
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Paid</th>
