@@ -81,7 +81,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('policies')}}">Policies</a>
@@ -158,9 +158,9 @@
     </div>
     <div class="container-fluid text-center bg-primary-s">
         <div class="container">
-            <div class="row hp-r1">
-                <div class="col-md-6">
-                    <img src="{{asset('images/pay.png')}}" alt="" width="500">
+            <div class="row hp-1">
+                <div class="col-md-6 ">
+                    <img src="{{asset('images/pay.png')}}" alt="" class="img-fluid">
                 </div>
                 <div class="col-md-6 ">
                     <div class="pay-mt text-white">
@@ -174,13 +174,13 @@
     <div class="container text-center">
         <div class="row hp-r1">
 
-            <div class="col-md-6 ">
+            <div class="col-md-6 order-sm-12">
                 <div class="pay-mt ">
                     <h2 class="text-primary-s">Accessibility and reliability</h2>
                 </div>
             </div>
-            <div class="col-md-6">
-                <img src="{{asset('images/Payment--Photo.png')}}" alt="" width="500">
+            <div class="col-md-6 order-sm-1">
+                <img src="{{asset('images/Payment--Photo.png')}}" alt="" class="img-fluid">
             </div>
         </div>
     </div>
@@ -193,6 +193,8 @@
             </div>
         </div>
     </footer>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
 </body>
 
 </html>

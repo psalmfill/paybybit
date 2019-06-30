@@ -10,10 +10,10 @@
 }
 
 #landing {
-    height: 500px;
+    min-height: 500px;
     background-image: url('../images/ba.jpg');
     background-size: cover;
-    margin-top: 50px
+    margin-top: 50px;
 }
 
 .landing-texts{
@@ -27,7 +27,8 @@
     padding: 5%;
     margin-top: 20%;
     border-radius: 5px;
-    height: 60%;
+    min-height: 60%;
+    margin-bottom: 2%;
 }
 
 .landing-form label {
@@ -36,12 +37,13 @@
 }
 .hp-r1 {
     margin: 10% auto;
+    height: auto;
 }
 
 .pay-mt {
-    position: absolute;
+    /* position: absolute; */
     top: 30%;
-    left: 10%;
+    padding: 30% 0;
     color: #212529
 }
 #login-landing {
@@ -59,10 +61,22 @@
     color: #ffffff;
     padding-top: 2%;
     padding-bottom: 2%;
+    margin-top: 5%;
 }
 #dashboard {
     margin-top: 6%;
     padding: 0;
+    margin-bottom: 5%;
+}
+#dash-footer {
+    background: #d00043;
+    color: #ffffff;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-top: 5%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 #side-nav {
     margin: 0px;
@@ -88,7 +102,7 @@
     color: #ffffff;
 }
 #side-nav ul li a:hover {
-    background: #3c5166;
+    background: #a50135;
 }
 .card-tile {
     
@@ -113,8 +127,11 @@
 @media all and (max-width:755px)
 {
  #side-nav {
-    margin-top: 26px;
+    margin-top: 12%;
     height: auto;
     position: static
  }
+ #login-form, #reg-form {
+    margin-top: 15%;
+}
 }

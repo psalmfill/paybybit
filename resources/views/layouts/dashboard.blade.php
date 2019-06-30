@@ -85,8 +85,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-2 bg-primary-s" id="side-nav">
-                        <nav class="navbar navbar-expand-md ">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbaraside" aria-controls="navbaraside" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <nav class="navbar navbar-expand-md navbar-dark">
+                            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbaraside" aria-controls="navbaraside" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
@@ -164,7 +164,7 @@
     <div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-dark text-white">
+                <div class="modal-header bg-primary-s text-white">
                     <h5 class="modal-title" id="purchaseModalLabel">New Purchase</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -205,11 +205,12 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-        <footer id="main-footer">
+    </div>
+        <footer id="dash-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -218,7 +219,6 @@
                 </div>
             </div>
         </footer>
-    </div>
 </body>
 
 </html>
