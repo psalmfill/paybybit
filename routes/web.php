@@ -37,4 +37,5 @@ Route::group(['namespace'=>"Admin",'prefix'=>'admin','middleware'=>'is_admin'],f
     Route::get('products/{id}/transactions','AdminController@transactions')->name('admin.product.transactions');
     Route::get('transactions','AdminController@allTransactions')->name('admin.transactions');
     Route::get('user/transactions/{id}','AdminController@userTransactions')->name('admin.user.transactions');
+    Route::put('user/{id}/update-role','AdminController@updateUserRole')->name('admin.user.updaterole');
 });

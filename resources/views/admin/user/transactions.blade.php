@@ -31,7 +31,7 @@
                             <td>{{$transaction->product->price}}</td>
                             <td>{{$transaction->amount}}</td>
                             <td>{{$transaction->product->balance}}</td>
-                            <td class="@if($transaction->product->status =='completed') bg-success @endif">{{$transaction->product->status}}</td>
+                            <td><button class="btn @if($transaction->product->status =='completed') btn-success @endif">{{$transaction->product->status}}</button></td>
         
                         </tr>
                         @empty

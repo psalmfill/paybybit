@@ -3,7 +3,7 @@
 <div class="container" style="margin-top:8%">
     <div class="row">
         <div class="col-md-12">
-            <h2 class="text-primary-s text-uppercase">Our Policies</h2>
+            <h2 class="text-primary-s text-uppercase"> How It Works</h2>
             <div class="policies">
                 <ul>
                     <li>

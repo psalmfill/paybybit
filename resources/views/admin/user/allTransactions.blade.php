@@ -21,9 +21,9 @@
                         <th>Price</th>
                         <th>Deposit</th>
                         <th>Balance</th>
-                        <td>Username</td>
-                        <td>Email</td>
-                        <td>Phone</td>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Phone</th>
                         <th>Status</th>
                     </thead>
                     <tbody>

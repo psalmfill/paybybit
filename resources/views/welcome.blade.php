@@ -71,31 +71,61 @@
 
 <body>
     <div class="header">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-                <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('/images/logo.jpeg')}}" alt="best-tech" width="80"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('/images/logo.jpeg')}}" alt="best-tech" width="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
+                        <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('welcome') }}"><i class="fa fa-home"></i> {{ __('Home') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('policies')}}">Policies</a>
+                            <a class="nav-link" href="{{route('policies')}}">How it works</a>
                         </li>
+                        @guest
+                        @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('register')}}">Create Account</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Create Account') }}</a>
                         </li>
+                        @endif
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('login')}}">Login</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
+
+                        @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <i class="fa fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                        @endguest
                     </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </div>
     <div class="container-fluid">
         <div class="row" id="landing">
@@ -159,12 +189,14 @@
     <div class="container-fluid text-center bg-primary-s">
         <div class="container">
             <div class="row hp-1">
+
                 <div class="col-md-6 ">
                     <img src="{{asset('images/pay.png')}}" alt="" class="img-fluid">
                 </div>
-                <div class="col-md-6 ">
+                <div class="col-md-6">
                     <div class="pay-mt text-white">
-                        <h2>We accept all forms of payment</h2>
+                        <h2>Yes! We accept all forms of payment. Be it cash payment, bank transfer
+                            or online payment. And definitely, you can pay in INSTALLMENT</h2>
                         <h2>You are never limited</h2>
                     </div>
                 </div>
@@ -174,9 +206,14 @@
     <div class="container text-center">
         <div class="row hp-r1">
 
-            <div class="col-md-6 order-sm-12">
+            <div class="col-md-6">
                 <div class="pay-mt ">
-                    <h2 class="text-primary-s">Accessibility and reliability</h2>
+                    <h2 class="text-primary-s">Accessibility & Reliability </h2>
+                    <h4>Bestech Kolo is an initiative of Bestech Int'l and we have been around for
+                        a long while. We have office location in Lagos and Abeokuta. </h4><br>
+
+                    <h4> Our products are reliable and offcourse original. Knidly feel safe and
+                        relax buying from us </h4>
                 </div>
             </div>
             <div class="col-md-6 order-sm-1">
@@ -184,11 +221,26 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="contact">
+
+                    <h2 class="text-primary-s">Contact Us</h2>
+                    <h4><strong>Head Office:</strong> No 2, Baruwa street, off Ijesha road, Surulere.</h4>
+                    <h4>Lagos.</h4>
+                    <h4><strong>Branch Office:</strong> No 35,Ola street off Ijesha road, Itire, Surulere</h4>
+                    <h4>Lagos.</h4>
+                    <h4><strong>Phone Number:</strong> 08067523967, 09073744475, 08117342063</h4>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer id="main-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-center">2019&copy;</p>
+                    <p class="text-center">&copy;2019,<br> Bestech International. <br> All Rights Reserved | Design by <a class="text-warning" href="https://billztechnologies.com/" target="_blank">Billz Technologies</a> </p>
                 </div>
             </div>
         </div>

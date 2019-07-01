@@ -46,7 +46,7 @@
                             <a class="nav-link" href="{{ route('welcome') }}">{{ __('Home') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('policies')}}">Policies</a>
+                            <a class="nav-link" href="{{route('policies')}}"> How It Works</a>
                         </li>
                         @guest
                         @if (Route::has('register'))
@@ -88,7 +88,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <p class="text-center">2019&copy;</p>
+                            <p class="text-center">&copy;2019,<br> Bestech International. <br> All Rights Reserved | Design by <a class="text-warning" href="https://billztechnologies.com/" target="_blank">Billz Technologies</a> </p>
+
                         </div>
                     </div>
                 </div>

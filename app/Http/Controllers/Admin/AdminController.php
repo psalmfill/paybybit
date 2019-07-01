@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Role;
 use App\Product;
 use App\Transaction;
 
@@ -39,8 +40,8 @@ class AdminController extends Controller
         return view('admin.products',compact('products'));
     }
 
-    public function allTransactions(Request $request,$id){
-        $transactions = Transaction::all($id);
+    public function allTransactions(Request $request){
+        $transactions = Transaction::all();
 
         return view('admin.user.allTransactions',compact('transactions'));
     } 
@@ -57,8 +58,9 @@ class AdminController extends Controller
     }
     public function users(){
         $users = User::all();
+        $roles = Role::all();
         
-        return view('admin.users',compact('users'));
+        return view('admin.users',compact('users','roles'));
     }
 
     public function userProducts(Request $request, $id)
@@ -82,14 +84,13 @@ class AdminController extends Controller
     {
         $product = Product::find($id);
 
-        if($product->banlance < $request->amount){
+        if( $product->balance < $request->amount){
             return redirect()->back()->with('error','Amount is more than the balance');
         }
         
         $product->paid = $this->calulatePaid($product,$request->amount);
         $product->balance = $this->calulateBalance($product);
         $product->status = $this->isPaymentComplete($product);
-        // dd($product);
         if($product->update()){
             $product->transactions()->create(['amount'=>$request->amount]);
             return redirect()->back()->with('message','Deposit successful');
@@ -97,6 +98,18 @@ class AdminController extends Controller
         
     }
 
+    public function updateUserRole(Request $request,$id)
+    {
+        // dd($request->all());
+        $user = User::find($id);
+        $user->role_id = $request->role_id;
+        if($user->update())
+
+            return redirect()->back()->with('message','User role updated Successfully');
+        
+        return redirect()->back()->with('error','Failed updating user role');
+        
+    }
     public function calulateBalance($product)
     {
         return $product->price - $product->paid;

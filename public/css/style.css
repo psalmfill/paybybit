@@ -1,3 +1,4 @@
+
 .text-primary-s {
     color:#d00043;
 }
@@ -8,7 +9,9 @@
     background-color:#d00043;
     color: #ffffff;
 }
-
+.border-primary-s {
+    border: 1px solid#d00043;
+}
 #landing {
     min-height: 500px;
     background-image: url('../images/ba.jpg');
@@ -29,11 +32,14 @@
     border-radius: 5px;
     min-height: 60%;
     margin-bottom: 2%;
+    box-shadow: 2px 5px 40px 2px #ffffff;
+    background: #ffffff;
 }
 
 .landing-form label {
     font-size: 18px;
-    color: #ffffff
+    margin: 2% 0;
+    color: #d00043
 }
 .hp-r1 {
     margin: 10% auto;
@@ -42,13 +48,13 @@
 
 .pay-mt {
     /* position: absolute; */
-    top: 30%;
-    padding: 30% 0;
+    top: 10%;
+    padding: 10% 0;
     color: #212529
 }
 #login-landing {
     min-height: 500px;
-    background-image: url('../images/shopper.jpg');
+    background-image: url('../images/shop.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -61,12 +67,12 @@
     color: #ffffff;
     padding-top: 2%;
     padding-bottom: 2%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
 }
 #dashboard {
-    margin-top: 6%;
+    margin-top: 100px;
     padding: 0;
-    margin-bottom: 5%;
+    margin-bottom: 150px;
 }
 #dash-footer {
     background: #d00043;
@@ -83,7 +89,8 @@
     position: fixed;
     height: 100%;
     padding: 0;
-    margin: 0
+    margin: 0;
+    top: 85px
 }
 #side-nav .navbar, #side-nav ul {
     padding: 0;
@@ -124,12 +131,20 @@
     padding:  5px 0;
     font-size: 18px;
 }
-@media all and (max-width:755px)
+.contact {
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 4px 4px 24px #eeeeee;
+    margin-bottom: 5%;
+}
+@media all and (max-width:965px)
 {
  #side-nav {
-    margin-top: 12%;
+    margin-top: 70px;
     height: auto;
-    position: static
+    top: 9px;
+    z-index: 1000;
+    /* position: static */
  }
  #login-form, #reg-form {
     margin-top: 15%;

@@ -46,7 +46,7 @@
                             <a class="nav-link" href="{{ route('welcome') }}"><i class="fa fa-home"></i> {{ __('Home') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('policies')}}">Policies</a>
+                            <a class="nav-link" href="{{route('policies')}}">How it works</a>
                         </li>
                         @guest
                         @if (Route::has('register'))
@@ -99,14 +99,14 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('admin.users') }}">{{ __('Users') }}</a>
+                                        <a class="nav-link" href="{{ route('admin.users') }}"><i class="fa fa-users"></i> {{ __('Users') }}</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('admin.products') }}">{{ __('Purchases') }}</a>
+                                        <a class="nav-link" href="{{ route('admin.products') }}"><i class="fa fa-shopping-cart"></i> {{ __('Purchases') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('admin.transactions') }}">{{ __('Transactions') }}</a>
+                                        <a class="nav-link" href="{{ route('admin.transactions') }}"><i class="fa fa-credit-card"></i> {{ __('Transactions') }}</a>
                                     </li>
                                     @else
                                     <li class="nav-item">
@@ -147,7 +147,7 @@
                             </div>
                             @endif
                             @if(session()->has('message'))
-                            <div class="alert alert-danger">
+                            <div class="alert alert-success">
                                 <p>{{session()->get('message')}}</p>
                             </div>
                             @endif
@@ -207,18 +207,18 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
-        <footer id="dash-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-center">2019&copy;</p>
-                    </div>
+   <!-- <footer id="dash-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">&copy;2019,<br> Bestech International. <br> All Rights Reserved | Design by Billz Technologies</p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer> -->
 </body>
 
 </html>

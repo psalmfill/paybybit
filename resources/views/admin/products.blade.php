@@ -37,7 +37,7 @@
                             <td> <button class="btn  @if($product->status =='completed') btn-success @endif">{{$product->status}}</button></td>
                             <td>{{$product->user->name}}</td>
                             <td>{{$product->user->email}}</td>
-                            <td>{{$product->created_at}}</td>
+                            <td>{{date('d - M - Y',strtotime($product->created_at))}}</td>
                             <td><a href="{{route('admin.product.transactions',$product->id)}}" class="btn btn-info text-white">Transactions</a></td>
                         </tr>
                         @endforeach
